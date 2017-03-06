@@ -67,8 +67,9 @@ $(document).ready(function() {
 	var loveList = CRA(104)
 	$(document).keydown(function() {
 		b = 2
+		$('#begin').remove()
 		hFunction()
-		$('h1').fadeTo(2000,1)
+		$('h1').fadeTo(1000,1)
 		$('h2').remove()
 		$('h3').remove()
 		
@@ -76,8 +77,14 @@ $(document).ready(function() {
 		var h3 = (loveList[i]*2)
 		$('body').append('<h2>'+love[h2]+'</h2>')
 		$('body').append('<h3>'+love[h3]+'</h3>')
-		$('h2').fadeTo(1000,1)
-		$('h3').fadeTo(1000,1)
+		if (i <1) {
+			$('h2').fadeTo(4000,1)
+			$('h3').fadeTo(4000,1)
+		}
+		else {
+			$('h2').fadeTo(1000,1)
+			$('h3').fadeTo(1000,1)
+		}
 		i ++
 
 
