@@ -31,12 +31,37 @@ function hFunction() {
 	var i = 0
 	$('div').each(function() {
 			$('#'+rL[i]).animate({left: posx[i], top: posy[i]},
-				{duration: 1000,
+				{duration: 1700,
 			})
 			i++
 			});
 }
 
+//Main Function
+function main(){
+
+		$('h4').remove()
+		hFunction()
+		$('h1').fadeTo(1000,1)
+		$('h2').remove()
+		$('h3').remove()
+		
+		var h2 = (loveList[j]*2)-1
+		var h3 = (loveList[j]*2)
+		$('body').append('<h2>'+love[h2]+'</h2>')
+		$('body').append('<h3>'+love[h3]+'</h3>')
+		if (j < 1) {
+			$('h2').fadeTo(4000,1)
+			$('h3').fadeTo(4000,1)
+		}
+		else {
+			$('h2').fadeTo(1000,1)
+			$('h3').fadeTo(1000,1)
+		}
+		j ++
+		$('h5').remove()
+		$('body').append('<h5>['+j+'/'+loveList.length+']<h5>')
+}
 
 //Heart Dots
 var posx = [100,150,200,250,300,350,400,450,500,500,450,400,350,300,250,200,150,100]
@@ -63,21 +88,24 @@ $(document).ready(function() {
 		});
 
 	//Moving divs to the heart position.
-	var i = 0
+	
+	var j = 0
 	var loveList = CRA(104)
+
+	
+
 	$(document).keydown(function() {
-		b = 2
-		$('#begin').remove()
+		$('h4').remove()
 		hFunction()
 		$('h1').fadeTo(1000,1)
 		$('h2').remove()
 		$('h3').remove()
 		
-		var h2 = (loveList[i]*2)-1
-		var h3 = (loveList[i]*2)
+		var h2 = (loveList[j]*2)-1
+		var h3 = (loveList[j]*2)
 		$('body').append('<h2>'+love[h2]+'</h2>')
 		$('body').append('<h3>'+love[h3]+'</h3>')
-		if (i <1) {
+		if (j < 1) {
 			$('h2').fadeTo(4000,1)
 			$('h3').fadeTo(4000,1)
 		}
@@ -85,9 +113,33 @@ $(document).ready(function() {
 			$('h2').fadeTo(1000,1)
 			$('h3').fadeTo(1000,1)
 		}
-		i ++
+		j ++
+		$('h5').remove()
+		$('body').append('<h5>['+j+'/'+loveList.length+']<h5>')
+	});
+	$(document).click(function() {
+		$('h4').remove()
+		hFunction()
+		$('h1').fadeTo(1000,1)
+		$('h2').remove()
+		$('h3').remove()
+		
+		var h2 = (loveList[j]*2)-1
+		var h3 = (loveList[j]*2)
+		$('body').append('<h2>'+love[h2]+'</h2>')
+		$('body').append('<h3>'+love[h3]+'</h3>')
+		if (j < 1) {
+			$('h2').fadeTo(4000,1)
+			$('h3').fadeTo(4000,1)
+		}
+		else {
+			$('h2').fadeTo(1000,1)
+			$('h3').fadeTo(1000,1)
+		}
+		j ++
+		$('h5').remove()
+		$('body').append('<h5>['+j+'/'+loveList.length+']<h5>')
+	});
 
 
 	});
-
-});
