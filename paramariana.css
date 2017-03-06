@@ -43,7 +43,7 @@ h2 {
 	color: white;
 	position: absolute;
 	left: 900px;
-	top: 350px;
+	top: 280px;
 	font-size: 60px;
 	opacity: 0;
 }
@@ -54,7 +54,7 @@ h3 {
 	font-style: italic;
 	position: absolute;
 	left: 900px;
-	top: 450px;
+	top: 380px;
 	opacity: 0;
 }
 h5 {
