@@ -23,7 +23,7 @@ h4 {
 	font-weight: normal;
 	text-align: center;
 	position: absolute;
-	font-size: 500%;
+	font-size: 10vh;
 	
 }
 
@@ -33,8 +33,8 @@ h1 {
 	font-weight: normal;
 	text-align: center;
 	position: absolute;
-	left: 50%;
-	font-size: 300%;
+	left: 40%;
+	font-size: 9vh;
 	opacity: 0;
 }
 
@@ -43,22 +43,22 @@ h2 {
 	color: white;
 	position: absolute;
 	left: 55%;
-	top: 30%;
-	font-size: 350%;
+	top: 36%;
+	font-size: 7vh;
 	opacity: 0;
 }
 
 h3 {
-	font-size: 300%;
+	font-size: 6vh;
 	color: white;
 	font-style: italic;
 	position: absolute;
 	left: 55%;
-	top: 40%;
+	top: 46%;
 	opacity: 0;
 }
 h5 {
-	font-size: 200%;
+	font-size: 3.5vh;
 	color: white;
 	font-style: italic;
 	position: absolute;
