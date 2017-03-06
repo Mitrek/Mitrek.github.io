@@ -1,0 +1,45 @@
+body {
+	background-image:URL('paramariana.jpg');
+	background-size:cover;
+
+    color: #444444;
+}
+
+div {
+	background-color: #cc0000;
+	border-radius: 100%;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	
+}
+
+h1 {
+	font-family: "Courier New";
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	left: 700px;
+	font-size: 80px;
+	opacity: 0;
+}
+
+h2 {
+	font-family: "Book Antiqua";
+	color: white;
+	position: absolute;
+	left: 900px;
+	top: 350px;
+	font-size: 60px;
+}
+
+h3 {
+	font-size: 50px;
+	color: white;
+	font-style: italic;
+	position: absolute;
+	left: 900px;
+	top: 450px;
+	opacity: 0;
+}
