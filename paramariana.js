@@ -73,11 +73,7 @@ j = 0
 
 $(document).ready(function() {
 	
-	
-	var eventSequence
-	var ES = eventSequence
-	
-	//Creating Heart Divs:
+	//Creating the Heart Divs:
 	var j = 0
 	for (var i = 0; i < 18; i++) {
 		$('body').append('<div id="'+(i)+'"></div>')
@@ -102,10 +98,11 @@ $(document).ready(function() {
 	$(document).click(function() {
 		main()
 	});
+	/* Removed behavior
 	$('div').mouseover(function() {
 		var id = $(this).attr('id')
 		$(this).animate({top: id*50+'px', left: '0px'}, 1000)		
-		
+	
 	});
-
+*/
 	});
