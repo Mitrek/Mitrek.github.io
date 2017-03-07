@@ -39,8 +39,9 @@ function hFunction() {
 
 //Main Function
 function main(){
+	
 		hFunction();
-		$('h4').remove();
+		$('#begin').remove();
 		$('h1').fadeTo(1000,1);
 		$('h2').remove();
 		$('h3').remove();
@@ -60,7 +61,26 @@ function main(){
 		$('body').append('<h5>['+(j+1)+'/'+loveList.length+']<h5>');
 		if (j >= 103) {j = 0};
 		j ++;
+}
+
+//Music funciton
+
+var myAudio;
+var music = false;
+function togglePlay() {
+	
+	if (!(music)) {
+		$('img').remove()
+		$('body').append('<img src = "speaker.png"></img>')
+		document.getElementById("edvard").play();
+		music = true;
+		} else {
+		$('img').remove()
+		$('body').append('<img src = "nospeaker.png"></img>')
+		document.getElementById("edvard").pause();
+		music = false;	
 		}
+};
 
 //Heart Dots
 var posx = [100,150,200,250,300,350,400,450,500,500,450,400,350,300,250,200,150,100];
@@ -71,9 +91,12 @@ pixelate(posx); pixelate(posy);
 //Global Vars
 var loveList = CRA(104);
 var j = 0;
+var music = 1;
 
 $(document).ready(function() {
-	
+
+
+	myAudio = document.getElementById("edvard")
 	//Creating the Heart Divs:
 	var k = 0
 	for (var i = 0; i < 18; i++) {
@@ -86,7 +109,7 @@ $(document).ready(function() {
 		k += 50;
 		});
 
-	//Moving divs to the heart position.
+	//Moving divs to the heart position, and love text changing/showing.
 
 	
 
@@ -94,15 +117,23 @@ $(document).ready(function() {
 		
 		main();
 	});
-	$(document).click(function() {
+	
+	$('body').on('click','img',function(){
+		togglePlay()
+		
+		});
 
-		main();
+
+
 	});
-	/* Removed behavior
+	
+	// Trash Can
+	// ______________________________________________________________________________________________________________________________________________________________
+	
+		/* Removed behavior
 	$('div').mouseover(function() {
 		var id = $(this).attr('id')
 		$(this).animate({top: id*50+'px', left: '0px'}, 1000)		
 	
 	});
 */
-	});

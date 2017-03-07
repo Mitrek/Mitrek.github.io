@@ -2,7 +2,6 @@ body {
 	background-image:URL('paramariana.jpg');
 	background-size:cover;
 	background-repeat: no-repeat;
-	color: #444444;
 }
 
 div {
@@ -10,6 +9,15 @@ div {
 	border-radius: 100%;
 	padding-top: 3.5%;
 	width: 3.5%;
+	position: absolute;
+	
+}
+
+img {
+	padding-top: 3%;
+	width: 3%;
+	left: 95%;
+	top: -3%;
 	position: absolute;
 	
 }
@@ -65,4 +73,11 @@ h5 {
 	right: 3%;
 	bottom: 5%;
 	opacity: .5;
+}
+
+#DBC {
+	
+	top: 60%;
+	opacity: 0.5;
+	
 }
