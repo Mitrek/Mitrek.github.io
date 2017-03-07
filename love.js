@@ -1,5 +1,4 @@
 var love = [
-'BLANK',
 '–Inglês',
 'I love you',
 '–Português',
@@ -25,7 +24,7 @@ var love = [
 '– Bielo-russo',
 'я цябе кахаю',
 '– Birmanês',
-'မင်းကိုချစ်တယ်',
+'mainnkohkyittaal',
 '– Bósnio',
 'volim te',
 '– Búlgaro',
@@ -207,5 +206,5 @@ var love = [
 '– Zulu',
 'Ngiyakuthanda',
 '– Tupi',
-'Oroaûsub'
+'Oroaûsub',
 ]
