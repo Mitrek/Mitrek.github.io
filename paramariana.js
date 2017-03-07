@@ -39,13 +39,11 @@ function hFunction() {
 
 //Main Function
 function main(){
-
 		$('h4').remove()
 		hFunction()
 		$('h1').fadeTo(1000,1)
 		$('h2').remove()
 		$('h3').remove()
-		
 		var h2 = (loveList[j]*2)-1
 		var h3 = (loveList[j]*2)
 		$('body').append('<h2>'+love[h2]+'</h2>')
@@ -69,6 +67,10 @@ var posy = [150,120,100,120,150,120,100,120,150,290,350,410,460,500,460,410,350,
 
 pixelate(posx); pixelate(posy);
 
+//Global Vars
+var loveList = CRA(104)
+j = 0
+
 $(document).ready(function() {
 	
 	
@@ -90,56 +92,20 @@ $(document).ready(function() {
 	//Moving divs to the heart position.
 	
 	var j = 0
-	var loveList = CRA(104)
+	
 
 	
 
 	$(document).keydown(function() {
-		$('h4').remove()
-		hFunction()
-		$('h1').fadeTo(1000,1)
-		$('h2').remove()
-		$('h3').remove()
-		
-		var h2 = (loveList[j]*2)-1
-		var h3 = (loveList[j]*2)
-		$('body').append('<h2>'+love[h2]+'</h2>')
-		$('body').append('<h3>'+love[h3]+'</h3>')
-		if (j < 1) {
-			$('h2').fadeTo(4000,1)
-			$('h3').fadeTo(4000,1)
-		}
-		else {
-			$('h2').fadeTo(1000,1)
-			$('h3').fadeTo(1000,1)
-		}
-		j ++
-		$('h5').remove()
-		$('body').append('<h5>['+j+'/'+loveList.length+']<h5>')
+		main()
 	});
 	$(document).click(function() {
-		$('h4').remove()
-		hFunction()
-		$('h1').fadeTo(1000,1)
-		$('h2').remove()
-		$('h3').remove()
-		
-		var h2 = (loveList[j]*2)-1
-		var h3 = (loveList[j]*2)
-		$('body').append('<h2>'+love[h2]+'</h2>')
-		$('body').append('<h3>'+love[h3]+'</h3>')
-		if (j < 1) {
-			$('h2').fadeTo(4000,1)
-			$('h3').fadeTo(4000,1)
-		}
-		else {
-			$('h2').fadeTo(1000,1)
-			$('h3').fadeTo(1000,1)
-		}
-		j ++
-		$('h5').remove()
-		$('body').append('<h5>['+j+'/'+loveList.length+']<h5>')
+		main()
 	});
-
+	$('div').mouseover(function() {
+		var id = $(this).attr('id')
+		$(this).animate({top: id*50+'px', left: '0px'}, 1000)		
+		
+	});
 
 	});
