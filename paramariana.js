@@ -44,8 +44,10 @@ function main(){
 		$('h1').fadeTo(1000,1)
 		$('h2').remove()
 		$('h3').remove()
+		if (loveList[j]) {
 		var h2 = (loveList[j]*2)-1
 		var h3 = (loveList[j]*2)
+		}
 		$('body').append('<h2>'+love[h2]+'</h2>')
 		$('body').append('<h3>'+love[h3]+'</h3>')
 		if (j < 1) {
