@@ -4,12 +4,13 @@ body {
 	font-family: 'Impact';
 }
 
+
 h1 {
 	font-size: 400%;
 }
 
 form {
-	font-family: 'courier new';
+	font-family: "Trebuchet MS";
 }
 
 #main {
@@ -19,6 +20,7 @@ form {
 	height: 150%;
 	position: absolute;
 	text-align: center;
+	display: inline-block;
 	
 }
 
@@ -27,17 +29,21 @@ form {
 	margin: 1em;
 	text-align: left;
 	position: relative;
+	vertical-align:top;
 	
 	
 }
 
 #wallet {
-	
-	text-align:center
+	z-index: 3;
+	text-align:center;
+	position: relative;
+	width: max-content;
+	margin: 0;
 	
 }
 #walletpng {
-	width: 10%;
+	width: 30%;
 
 
 }
@@ -45,7 +51,9 @@ form {
 #money {
 	font-family: 'Impact'; 
 	color:#00ff00;
-	font-size: 2vw;
+	font-size: 6vh;
+	text-align: center;
+	transform: translateY(-110%);
 }
 
 table {
