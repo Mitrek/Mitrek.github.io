@@ -35,12 +35,13 @@ form {
 }
 
 #wallet {
-	z-index: 3;
+	z-index: 1;
 	text-align:center;
 	position: relative;
 	width: max-content;
 	margin: 0;
 	top: -10%;
+	pointer-events:none;
 	
 }
 #walletpng {
@@ -57,14 +58,8 @@ form {
 	transform: translateY(-110%);
 }
 
-table {
-	display: table;
-	table-layout: fixed;
-}
-
-tr { 
-display: table-cell;
-width: 33%;
+#promocode {
+	vertical-align: right;
 }
 
 input {
@@ -72,3 +67,19 @@ input {
 	vertical-align: center;
 	margin: 0px;
 }
+
+
+telefone {
+	font-size: 3vh;
+	vertical-align: right;
+}
+
+contato {
+	font-size: 3vh;
+	vertical-align: right;
+	
+}
+
+bloco {
+	position: absolute;
+	font-family: helvetica;

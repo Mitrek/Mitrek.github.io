@@ -1,7 +1,6 @@
 //Made by Mitrek to his loving girlfriend MelJM.
 
 //GlobalVar
-
 var money = 0
 var input = ''
 var sizeP = 15
@@ -10,6 +9,7 @@ var chocoP = 0
 var fillP = 0
 var pergram = 0.094
 var price = 0
+var pc = 0
 
 var fillPrices = {
 	// Preço da grama em centavos
@@ -27,6 +27,22 @@ var fillPrices = {
 }
 
 //Functions
+
+
+// Promocode Validation
+
+function promoValidations() {
+	
+	var code = document.getElementById('tinput');
+	var code = code.elements[0].value
+	if (code == '18041995') {
+		alert('Validação concluída!')
+		pc = 1
+		sWallet()
+	}
+	
+}
+
 
 //Simultaneous Wallet
 
@@ -81,12 +97,18 @@ function sWallet() {
 	}
 	price = pergram * size
 	fillP = Number(price) + chocoP
+	if (pc) {fillP *= 0.9}
 	fillP = Math.round(fillP)
 	money = fillP
 	$('#wallet').append('<figcaption id="money">R$' + money + ',90</figcaption>')
 }
 
 $(document).ready(function() {
+	
+	$(document).keydown(function() {
+		promoValidations()
+		
+	});
 	
 	$('input').click(function() {
 		input = '' + (this).name + (this).value
